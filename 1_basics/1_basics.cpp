@@ -21,7 +21,7 @@ int main()
 
     int *p;
 
-
+// allocation of heap memory
     // C language
     p=(int *)malloc(5*sizeof(int)); // allocation of heap memory
     free(p); // free it, 
@@ -32,9 +32,13 @@ int main()
     p[0]=10; p[1]=15;p[2]=14;p[3]=21;p[4]=31;
 
     for(int i=0;i<5;i++)
-    cout << p[i]<< endl;
+    {
+        cout << p[i]<< endl;
+    }
 
-    delete [] p;
+    
 
+    // delete [] p; // C++ to free memory
+    free(p); // C to free
 
 }
